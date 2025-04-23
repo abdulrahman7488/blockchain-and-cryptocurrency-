@@ -1,0 +1,40 @@
+{
+  "name": "blind-signatures",
+  "version": "1.0.7",
+  "description": "Chaum's Blind Signatures",
+  "main": "./dist/rsablind.js",
+  "scripts": {
+    "build": "babel rsablind*.js --presets=@babel/preset-env --out-dir dist",
+    "prepublish": "npm run build",
+    "test": "tape ./tests/**/*.js",
+    "prettier": "prettier --write --single-quote --trailing-comma es5 *.js"
+  },
+  "keywords": [
+    "signature",
+    "blinding",
+    "blind",
+    "signatures",
+    "chaum",
+    "message",
+    "signing"
+  ],
+  "author": "Kevin Johnson (KevinEJohn)",
+  "license": "MIT",
+  "dependencies": {
+    "js-sha256": "0.9.0",
+    "jsbn": "1.1.0",
+    "node-rsa": "1.0.8",
+    "secure-random": "1.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "prettier": "2.0.5",
+    "tape": "5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinejohn/blind-signatures.git"
+  }
+}
